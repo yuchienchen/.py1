@@ -19,9 +19,11 @@ def greater_than(threshold, num_list):
     >>> greater_than(0, [])
     []
     """
+    update_list = []
     for ele in num_list:
         if ele > threshold:
-            print(ele)
+            update_list.append(ele)
+    print(update_list)
 
 
 def main():

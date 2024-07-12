@@ -1,9 +1,7 @@
-
+# create individual list
 list = []
-list.append("Trader Joe’s")
-list.append("Banana")
-list.append("Kale")
-list.append("Baguette")
+for i in range(4):
+    list.append(input(""))
 
 print(list)
 

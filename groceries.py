@@ -1,17 +1,16 @@
 # create individual list
-def get_grocery_list():
+for i in range(3):
+    list = []
+    for i in range(4):
+        list.append(input(""))
 
-    grocery_list = []
-    while True:
-        user_input = input("")
+    print(list)
 
-        # If the user enters a blank line, break out of the loop and stop asking for input
-        if user_input == "":
-            break
-    
-        grocery_list.append(user_input)
+grid = []
+for i in range(3):
+    grid.append(list)
 
-    return grocery_list
+print(grid)
 
 def get_groceries(index, grid):
     pass

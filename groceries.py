@@ -1,20 +1,20 @@
 # start over
 
-# def get_list():
-lst = []
-elem = input("")
-while elem != "":
-    lst.append(elem)
+def get_list():
+    lst = []
     elem = input("")
+    while elem != "":
+        lst.append(elem)
+        elem = input("")
 
-print(lst)
+    return lst
 
 # store lists in a grid
-# def build_grid(roster):
-grid = []
-grid.append(lst)
+def build_grid(roster):
+    grid = []
+    grid.append(roster)
 
-print(grid)
+    print(grid)
 
 # def get_groceries(index, grid):
 #     type_list = []
@@ -28,9 +28,8 @@ print(grid)
 #     return type_list
 
 def main():
-    pass
-    # roster = get_list()
-    # build_grid(roster)
+    roster = get_list()
+    build_grid(roster)
     # get_groceries(index, grid)
 
 

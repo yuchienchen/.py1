@@ -20,23 +20,36 @@ def get_list_build_grid():
         # prints the current state of the grid after each new list is added
         print("Current grid: ", grid)
     # prints the final grid after the loop ends
-    print("Final grid: ", grid)
+    print("Final grid: ", grid)    
 
 # def get_groceries(index, grid):
-#     type_list = []
-#     rows = len(grid)
-#     cols = len(grid[0])
-#     for i in range(rows):
-#         for index in range(cols):
-#             print(grid[i][index])
-#             type_list.append(grid[i][index])
+    type_list = []
+    rows = len(grid)
+    cols = len(grid[0])
+    for i in range(rows):
+        for index in range(cols):            
+            if index == 1:
+                type_list.append(grid[i][index])
+    print(type_list)
+
+    for i in range(rows):
+        for index in range(cols):            
+            if index == 2:
+                type_list.append(grid[i][index])
+    print(type_list)
+
+    for i in range(rows):
+        for index in range(cols):            
+            if index == 3:
+                type_list.append(grid[i][index])
+    print(type_list)
         
-#     return type_list
+    # return type_list
 
 def main():
-    roster = get_list_build_grid()
-    # build_grid(roster)
-    # get_groceries(index, grid)
+    grid = get_list_build_grid()
+    # index_type_list = get_groceries(index, grid)
+    # print(index_type_list)
 
 
 if __name__ == '__main__':

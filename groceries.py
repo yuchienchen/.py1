@@ -1,13 +1,17 @@
 # start over
 
 def get_list():
-    lst = []
-    elem = input("")
-    while elem != "":
-        lst.append(elem)
+    while True:
+        lst = []
         elem = input("")
+        while elem != "":
+            lst.append(elem)
+            elem = input("")
 
-    return lst
+        # print(lst)
+        if lst == []:
+            break 
+        return lst      
 
 # store lists in a grid
 def build_grid(roster):
@@ -29,7 +33,7 @@ def build_grid(roster):
 
 def main():
     roster = get_list()
-    build_grid(roster)
+    # build_grid(roster)
     # get_groceries(index, grid)
 
 

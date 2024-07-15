@@ -3,7 +3,7 @@ def main():
                 [3,0,0,0,0,0,0,0,0,0,0,0],
                 [12,0,0,0,0,0,0,0,0,0,0,0]]
     nested = month_values
-    annual_temps(nested)
+    print(annual_temps(nested))
 
 def annual_temps(nested):
     ave_temps = []
@@ -14,9 +14,9 @@ def annual_temps(nested):
         print(sum(nested[i]))
         average_temp = sum(nested[i]) / len(nested[i])
         print(average_temp)
-    #     ave_temps.append(average_temp)
+        ave_temps.append(average_temp)
     
-    # return ave_temps
+    return ave_temps
 
         # for j in range(cols):
         #     print(nested[i][j])

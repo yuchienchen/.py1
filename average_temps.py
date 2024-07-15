@@ -10,8 +10,10 @@ def annual_temps(nested):
     rows = len(nested)
     cols = len(nested[0])
     for i in range(rows):
-        for j in range(cols):
-            print(nested[i][j])
+        print(nested[i])
+        # for j in range(cols):
+        #     print(nested[i][j])
+        #     average_temp =  / len(nested[i])
 
 
 if __name__ == '__main__':

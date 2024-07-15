@@ -1,7 +1,7 @@
-# initializes an empty list to store the lists
-grid = []
 
 def get_list_build_grid():
+    # initializes an empty list to store the lists
+    grid = []
     # keeps generating new lists until the user inputs an empty list
     while True:
         lst = []
@@ -22,7 +22,8 @@ def get_list_build_grid():
     # prints the final grid after the loop ends
     print("Final grid: ", grid)    
 
-# def get_groceries(index, grid):
+def get_groceries(index, grid):
+    print(grid)
     fruit_list = []
     vege_list = []
     carbs_list = []
@@ -45,8 +46,16 @@ def get_list_build_grid():
 
 def main():
     grid = get_list_build_grid()
-    # index_type_list = get_groceries(index, grid)
-    # print(index_type_list)
+    # print(grid)
+    index = input("Enter a number: ")
+    get_groceries(index, grid)
+
+    if index == 1: 
+        print(get_groceries(index, grid))
+    if index == 2:
+        print(get_groceries(index, grid))
+    if index == 3:
+        print(get_groceries(index, grid))
 
 
 if __name__ == '__main__':

@@ -23,26 +23,28 @@ def get_list_build_grid():
     print("Final grid: ", grid)    
 
 # def get_groceries(index, grid):
-    type_list = []
+    fruit_list = []
     rows = len(grid)
     cols = len(grid[0])
     for i in range(rows):
         for index in range(cols):            
             if index == 1:
-                type_list.append(grid[i][index])
-    print(type_list)
+                fruit_list.append(grid[i][index])
+    print(fruit_list)
 
+    vege_list = []
     for i in range(rows):
         for index in range(cols):            
             if index == 2:
-                type_list.append(grid[i][index])
-    print(type_list)
+                vege_list.append(grid[i][index])
+    print(vege_list)
 
+    carbs_list = []
     for i in range(rows):
         for index in range(cols):            
             if index == 3:
-                type_list.append(grid[i][index])
-    print(type_list)
+                carbs_list.append(grid[i][index])
+    print(carbs_list)
         
     # return type_list
 

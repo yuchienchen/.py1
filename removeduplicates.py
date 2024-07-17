@@ -15,13 +15,11 @@ def read_list():
     """
     list = []
     user_input = input("Enter value (0 to stop): ")
-    while True:
+    while user_input != 0:
         list.append(user_input)
         user_input = input("Enter value (0 to stop): ")
-        if user_input == 0:
-            break
 
-    print(list)
+    return list
 
 def remove_duplicates(num_list):
     """
@@ -42,9 +40,9 @@ def main():
     print("Original list entered by user: ")
     print(num_list)
 
-    no_duplicates = remove_duplicates(num_list)
-    print("List with duplicates removed: ")
-    print(no_duplicates)
+    # no_duplicates = remove_duplicates(num_list)
+    # print("List with duplicates removed: ")
+    # print(no_duplicates)
 
 
 # This provided line is required at the end of a Python file

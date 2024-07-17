@@ -13,11 +13,12 @@ def read_list():
     (until the user enters 0 to stop) and store all those values in a
     list.  That list should then be returned by this function.
     """
-    list = []
-    user_input = input("Enter value (0 to stop): ")
-    while user_input != 0:
+    list = [] 
+    while True:
+        user_input = int(input("Enter value (0 to stop): "))
+        if user_input == 0:
+            break
         list.append(user_input)
-        user_input = input("Enter value (0 to stop): ")
 
     return list
 

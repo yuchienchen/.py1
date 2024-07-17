@@ -13,11 +13,14 @@ def explode_fireworks(grid):
     for y in range(rows):
         for x in range(cols):
             # print(grid[y][x])
-            grid = [grid[y][x] == None, grid[y - 1][x] == 's', grid[y + 1][x] == 's', grid[y][x - 1] == 's', grid[y][x + 1] == 's' if grid[y][x] == 'f' else None]
-    print(grid)
-
-
-            # if grid[y][x] == 'f':
+            if grid[y][x] == 'f':
+                grid = [grid[y][x] == None, 
+                        grid[y - 1][x] == 's' if y - 1 >= 0 else False,
+                        grid[y + 1][x] == 's' if y + 1 < rows else False, 
+                        grid[y][x - 1] == 's' if x - 1 >= 0 else False,  
+                        grid[y][x + 1] == 's' if x + 1 < cols else False,]
+                print(grid)
+            
             #     grid[y - 1][x] == 's'
             #     grid[y + 1][x] == 's'
             #     grid[y][x - 1] == 's'

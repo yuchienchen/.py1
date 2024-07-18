@@ -17,13 +17,14 @@ def expand_encoded_string(encoded):
     'Bookkeeper!!!'
     """
     # length = len(encoded)
+    ch = ''
+    digit = 1
     for i in range(len(encoded)):
         if i % 2 == 0:
             ch = encoded[i]
-        if i % 2 == 1:
-            digit = encoded[i]
-        print(ch * str(digit))
-    
+        else:
+            digit = int(encoded[i])
+            print(ch * digit)
 
 
 def main():

@@ -13,11 +13,12 @@ def read_list():
     (until the user enters 0 to stop) and store all those values in a
     list.  That list should then be returned by this function.
     """
-    list = [] 
+    list = []
     while True:
         user_input = int(input("Enter value (0 to stop): "))
         if user_input == 0:
             break
+        num = int(user_input)
         list.append(user_input)
 
     return list
@@ -33,17 +34,33 @@ def remove_duplicates(num_list):
     >>> remove_duplicates([])
     []
     """
-    pass
+    num_dict = {}
+    for num in num_list:
+        if num not in num_dict:
+            num_dict[num] = 1
+        else:
+            num_dict[num] += 1
+    
+    print(num_dict)
 
+    for key, value in num_dict.items():
+        if value > 1:
+            
+
+    # update_list = []
+
+    # update_list.append()
+
+    # return update_list
 
 def main():
     num_list = read_list()
     print("Original list entered by user: ")
     print(num_list)
 
-    # no_duplicates = remove_duplicates(num_list)
-    # print("List with duplicates removed: ")
-    # print(no_duplicates)
+    no_duplicates = remove_duplicates(num_list)
+    print("List with duplicates removed: ")
+    print(no_duplicates)
 
 
 # This provided line is required at the end of a Python file

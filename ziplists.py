@@ -26,11 +26,30 @@ def zip2lists(list1, list2):
     []
     """
     grid = []
-    sub_list = []
-    for i in range(len(list1)) and range(len(list2)):
-        sub_list.append(list1[i])
-        sub_list.append(list2[i])
-    print(sub_list)
+    sub_list1 = []
+    sub_list1.append(list1[0])
+    sub_list1.append(list2[0])
+    print(sub_list1)
+
+    sub_list2 = []
+    sub_list2.append(list1[1])
+    sub_list2.append(list2[1])
+    print(sub_list2)
+
+    sub_list3 = []
+    sub_list3.append(list1[2])
+    sub_list3.append(list2[2])
+    print(sub_list3)
+
+    grid.append(sub_list1)
+    grid.append(sub_list2)
+    grid.append(sub_list3)
+    return grid
+
+    # for i in range(len(list1)) and range(len(list2)):
+    #     sub_list.append(list1[i])
+    #     sub_list.append(list2[i])
+    # print(sub_list)
 
 
 def main():

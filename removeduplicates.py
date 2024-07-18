@@ -19,7 +19,7 @@ def read_list():
         if user_input == 0:
             break
         num = int(user_input)
-        list.append(user_input)
+        list.append(num)
 
     return list
 
@@ -34,6 +34,7 @@ def remove_duplicates(num_list):
     >>> remove_duplicates([])
     []
     """
+    update_list = []
     num_dict = {}
     for num in num_list:
         if num not in num_dict:
@@ -44,14 +45,10 @@ def remove_duplicates(num_list):
     print(num_dict)
 
     for key, value in num_dict.items():
-        if value > 1:
-            
+        # if value > 1:
+        update_list.append(key) 
 
-    # update_list = []
-
-    # update_list.append()
-
-    # return update_list
+    return update_list
 
 def main():
     num_list = read_list()

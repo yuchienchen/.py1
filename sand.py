@@ -33,7 +33,7 @@ def do_move(grid, x1, y1, x2, y2):
     grid[y1][x1], grid[y2][x2] = grid[y2][x2], grid[y1][x1]
     return grid
 
-doctest.testmod()
+doctest.testmod(name="do_move")
 
 def check_move(grid, x1, y1, x2, y2):
     """

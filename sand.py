@@ -9,6 +9,7 @@ import sys
 import tkinter
 import random
 import datetime
+import doctest
 
 
 def do_move(grid, x1, y1, x2, y2):
@@ -31,6 +32,8 @@ def do_move(grid, x1, y1, x2, y2):
     """
     grid[y1][x1], grid[y2][x2] = grid[y2][x2], grid[y1][x1]
     return grid
+
+doctest.testmod()
 
 def check_move(grid, x1, y1, x2, y2):
     """

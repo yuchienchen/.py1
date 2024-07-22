@@ -75,7 +75,7 @@ def check_move(grid, x1, y1, x2, y2):
         return False
     if grid[y2][x2] != None:
         return False
-    if (x1 += 1) >= len(grid) or (x1 -= 1) < 0 or (y1 += 1) >= len(grid[0]):
+    if not (x1 + 1 < len(grid) and x1 - 1 >= 0 and y1 + 1 < len(grid[0])):
         return False
     if grid[y2 - 1][x2] != None:
         return False

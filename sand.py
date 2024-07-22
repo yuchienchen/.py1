@@ -69,8 +69,18 @@ def check_move(grid, x1, y1, x2, y2):
     >>> check_move(grid, 1, 0, 2, 1)  # down-right blocked, corner rule
     False
     """
-    pass
-
+    if not (y2 >= 0 and y2 < len(grid[0])):
+        return False
+    if not (x2 >= 0 and x2 < len(grid)):
+        return False
+    if grid[y2][x2] != None:
+        return False
+    if (x1 += 1) >= len(grid) or (x1 -= 1) < 0 or (y1 += 1) >= len(grid[0]):
+        return False
+    if grid[y2 - 1][x2] != None:
+        return False
+    
+doctest.testmod(name="check_move")
 
 def do_gravity(grid, x, y):
     """

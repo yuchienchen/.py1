@@ -69,16 +69,38 @@ def check_move(grid, x1, y1, x2, y2):
     >>> check_move(grid, 1, 0, 2, 1)  # down-right blocked, corner rule
     False
     """
-    if not (y2 >= 0 and y2 < len(grid[0])):
-        return False
-    if not (x2 >= 0 and x2 < len(grid)):
+    if not (0 <= y2 < len(grid) and 0 <= x2 < len(grid[0])):
         return False
     if grid[y2][x2] != None:
         return False
-    if not (x1 + 1 < len(grid) and x1 - 1 >= 0 and y1 + 1 < len(grid[0])):
+    if (y1 == y2 or y1 == y2 - 1) and grid[y2][x2] is None:
+        if x1 == x2:
+            return True
+        if x1 - 1 is None: 
+            return True
+        if x1 + 1 is None:
+            return True
+        if x1 == x2 - 1 and grid[y1][x2] is None:
+            return True
+        if x1 == x2 + 1 and grid[y1][x2] is None:
+            return True
         return False
-    if grid[y2 - 1][x2] != None:
-        return False
+    
+    # if y1 == y2 and grid[y2][x2] is None:       # side movement
+    #     if x2 == None:
+    #         return True
+    # if x1 == x2 and grid[y2][x2] is None:       # down movement
+    #     if y1 + 1 == None:
+    #         return True
+    # if y1 == y2 - 1 and grid[y2][x2] is None:   # diagnol movement
+    #     if grid[y2 - 1][x2] == None:
+    #         return True
+    #     if grid[y2 - 1][x1 - 1] == None:
+    #         return True
+    # if not (x1 + 1 < len(grid[0]) and x1 - 1 >= 0 and y1 + 1 < len(grid)):
+    #     return False
+    # if grid[y2 - 1][x2] != None:
+    #     return False
     
 doctest.testmod(name="check_move")
 

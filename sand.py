@@ -147,7 +147,16 @@ def do_gravity(grid, x, y):
     >>> do_gravity(grid, 1, 1)
     [[None, None, None], [None, 's', None]]
     """
-    pass
+    if grid[y][x] != 's':
+        return grid
+    # if grid[y][x] == 's':
+    #     if check_move is True:
+    #         do_move
+
+
+    return grid
+
+doctest.testmod(name="do_gravity")
 
 
 def do_brownian(grid, x, y, brownian):

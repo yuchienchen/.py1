@@ -167,7 +167,19 @@ def do_brownian(grid, x, y, brownian):
     Given grid, x,y, and brownian int 0..100.
     Do the random brownian move for that x,y.
     """
-    pass
+    if grid[y][x] != 's':
+        return grid
+    if grid[y][x] == 's':
+        num = random.randrange(100)
+        if num < brownian:
+            coin = random.randrange(2)
+            if coin == 0:
+                if check_move(grid, x, y, x - 1, y):
+                    do_move(grid, x, y, x - 1, y)
+            if coin == 1:
+                if check_move(grid, x, y, x + 1, y):
+                    do_move(grid, x, y, x + 1, y)
+        return grid
 
 
 def do_whole_grid(grid, brownian):

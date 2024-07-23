@@ -147,14 +147,18 @@ def do_gravity(grid, x, y):
     >>> do_gravity(grid, 1, 1)
     [[None, None, None], [None, 's', None]]
     """
+    
     if grid[y][x] != 's':
         return grid
-    # if grid[y][x] == 's':
-    #     if check_move is True:
-    #         do_move
-
-
-    return grid
+    if grid[y][x] == 's' and grid[y + 1][x] is None:
+        do_move(grid, x1, y1, x2, y2)
+        return grid
+    elif grid[y][x] == 's' and grid[y][x - 1] is None:
+        do_move(grid, x1, y1, x2, y2)   
+        return grid
+    elif grid[y][x] == 's' and grid[y][x + 1] is None:
+        do_move(grid, x1, y1, x2, y2)   
+        return grid    
 
 doctest.testmod(name="do_gravity")
 

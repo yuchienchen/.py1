@@ -153,9 +153,9 @@ def do_gravity(grid, x, y):
     if grid[y][x] == 's':
         if check_move(grid, x, y, x, y + 1):
             do_move(grid, x, y, x, y + 1)
-        elif check_move(grid, x, y, x - 1, y):
+        elif check_move(grid, x, y, x - 1, y + 1):
             do_move(grid, x, y, x - 1, y + 1)
-        elif check_move(grid, x, y, x + 1, y):
+        elif check_move(grid, x, y, x + 1, y + 1):
             do_move(grid, x, y, x + 1, y + 1)
         return grid
 

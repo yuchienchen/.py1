@@ -181,7 +181,12 @@ def do_whole_grid(grid, brownian):
     >>> do_whole_grid(grid, 0)
     [[None, None, None], [None, 's', None], [None, None, 's']]
     """
-    pass
+    for y in reversed(range(len(grid))):
+        for x in range(len(grid[0])):
+            do_gravity(grid, x, y)
+    return grid
+
+doctest.testmod(name="do_whole_grid")
 
 
 ################################################

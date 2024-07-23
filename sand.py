@@ -74,15 +74,15 @@ def check_move(grid, x1, y1, x2, y2):
     if grid[y2][x2] != None:
         return False
     if (y1 == y2 or y1 == y2 - 1) and grid[y2][x2] is None:
-        if x1 == x2:
+        if x1 == x2:        # down movement
             return True
-        if x1 - 1 is None: 
+        if x1 - 1 is None:      # side movement 
             return True
-        if x1 + 1 is None:
+        if x1 + 1 is None:      # side movement 
             return True
-        if x1 == x2 - 1 and grid[y1][x2] is None:
+        if x1 == x2 - 1 and grid[y1][x2] is None:       # diagnol move(corner rule)
             return True
-        if x1 == x2 + 1 and grid[y1][x2] is None:
+        if x1 == x2 + 1 and grid[y1][x2] is None:       # diagnol move(corner rule)
             return True
         return False
     
@@ -97,6 +97,7 @@ def check_move(grid, x1, y1, x2, y2):
     #         return True
     #     if grid[y2 - 1][x1 - 1] == None:
     #         return True
+
     # if not (x1 + 1 < len(grid[0]) and x1 - 1 >= 0 and y1 + 1 < len(grid)):
     #     return False
     # if grid[y2 - 1][x2] != None:
